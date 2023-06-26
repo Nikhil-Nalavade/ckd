@@ -18,26 +18,30 @@
         <!-- Result -->
 		<div style="color:black;" class="results">
 			{% if prediction==1 %}
-                {% if (bp>=60) and (appet==0) and (hemo <=  9.9) %}
+                {% if (bp>=60) and (appet==0) and (hemo <=  9.9) or (bu >=20 ) or (sc >= 2.5) or (pcv <= 30) %}
 				    <h1><span class='danger'>Oops! 🙁<br><br>You have CHRONIC KIDNEY DISEASE.<br><br>Please Consult Doctor.</span></h1>
                     <img src="https://raw.githubusercontent.com/Nikhil-Nalavade/ckd/main/imgs/stage4.png" width="1300" height="600px" />
                     <br><br><br><br><br><br>
 				    <img class="gif" src="{{ url_for('static', filename='no.gif')}}" alt="STROKE Image">
-                {% elif (bp>=60) and (appet==0) %}
+                {% elif (bp>=60) and (appet==0) or (bu >=20 ) or (sc > 1.2)%}
                     <h1><span class='danger'>Oops! 🙁<br><br>You have CHRONIC KIDNEY DISEASE.<br><br>Please Consult Doctor.</span></h1>
                     <img src="https://raw.githubusercontent.com/Nikhil-Nalavade/ckd/main/imgs/stage3.png" width="1300" height="600px" />
                     <br><br><br><br><br><br>
                     <img class="gif" src="{{ url_for('static', filename='no.gif')}}" alt="STROKE Image">
-                {% elif appet==0 %}
+                {% elif appet==0 or (bu in range(14,20,1 )) or (sc <= 1.2)%}
                     <h1><span class='danger'>Oops! 🙁<br><br>You have CHRONIC KIDNEY DISEASE.<br><br>Please Consult Doctor.</span></h1>
                     <img src="https://raw.githubusercontent.com/Nikhil-Nalavade/ckd/main/imgs/stage2.png" width="1300" height="600px" />
                     <br><br><br><br><br><br>
                     <img class="gif" src="{{ url_for('static', filename='no.gif')}}" alt="STROKE Image">
-                {% else %}
+                {% elif bu in range(7,14,1 ) %}
                     <h1><span class='danger'><br><br>Your Chronic Kidney Disease is in control.<br><br></span></h1>
                     <img src="https://raw.githubusercontent.com/Nikhil-Nalavade/ckd/main/imgs/stage1.png" width="1300" height="600px" />
                     <br><br><br><br><br><br>
                     <img class="gif" src="{{ url_for('static', filename='no.gif')}}" alt="STROKE Image">
+                {% else %}
+            
+                <h1><span class='safe'>🎉 Congratulation! 🎉<br><br>Your Chronic Kidney Disease is in control.</span></h1>
+                <img src="https://raw.githubusercontent.com/Nikhil-Nalavade/ckd/main/imgs/stage1.png" width="1300" height="600px" />
                 
                 
                 {% endif %}
