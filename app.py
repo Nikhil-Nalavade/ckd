@@ -66,7 +66,7 @@ def predict():
         # else:
         #   flash('you dont have disease , u can eat everything ')
 
-        return render_template('result.html', prediction=prediction,bp=bp,hemo=hemo,appet=appet)
+        return render_template('result.html', prediction=prediction,bp=bp,hemo=hemo,appet=appet,bu=bu,sc=sc,pcv=pcv)
 
 
 if __name__ == "__main__":
