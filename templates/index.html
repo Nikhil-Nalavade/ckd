@@ -16,37 +16,52 @@
             <br>
             <br>
             <h3>Age</h3>
-            <input id="eight" name="age" placeholder="in Years" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="2" max="90" oninput="(!validity.rangeOverflow||(value=90)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="age" placeholder="in Years" required="required">
             <br>
             <h3>Blood Pressure</h3>
             <input id="eight" name="bp" placeholder="in mm/Hg" required="required">
             <br>
             <h3>Specific Gravity</h3>
-            <input id="first" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required">
+            <input id="first"  name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required">
             <br>
             <h3>Albumin</h3>
-            <input id="fifth" name="al" placeholder="(0,1,2,3,4,5)" required="required">
+            <label for="numberSize"></label>
+            <input id="fifth" type="number" min="0" max="5" oninput="(!validity.rangeOverflow||(value=5)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="al" placeholder="(0,1,2,3,4,5)" required="required">
             <br>
             <h3>Sugar</h3>
-            <input id="eight" name="su" placeholder="(0,1,2,3,4,5)" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="5" oninput="(!validity.rangeOverflow||(value=5)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="su" placeholder="(0,1,2,3,4,5)" required="required">
             <br>
             <h3>Red Blood Cells</h3>
             <input id="eight" name="rbc" placeholder="in millions/cmm" required="required">
             <br>
             <h3>Pus Cell</h3>
-            <input id="eight" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required">
             <br>
             <h3>Pus Cell Clumps</h3>
-            <input id="eight" name="pcc" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="pcc" placeholder="Yes = 1, No=0" required="required">
             <br>
             <h3>Bacteria</h3>
-            <input id="eight" name="ba" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="ba" placeholder="Yes = 1, No=0" required="required">
             <br>
             <h3>Blood Glucose Random</h3>
             <input id="eight" name="bgr" placeholder="in mgs/dl" required="required">
             <br>
             <h3>Blood Urea</h3>
-            <input id="eight" name="bu" placeholder="in mgs/dl" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="7" max="20" oninput="(!validity.rangeOverflow||(value=20)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="bu" placeholder="in mgs/dl" required="required">
+            <span id="error"></span>
             <br>
             <h3>Serum Creatinine</h3>
             <input id="eight" name="sc" placeholder="in mgs/dl" required="required">
@@ -70,22 +85,34 @@
             <input id="seventh" name="rc" placeholder="in Millions/cmm" required="required">
             <br>
             <h3>Hyper Tension</h3>
-            <input id="second" name="htn" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="second" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="htn" placeholder="Yes = 1, No=0" required="required">
             <br>
             <h3>Diabetes Mellitus</h3>
-            <input id="fourth" name="dm" placeholder="Yes = 1, No=0" required="required">            
+            <label for="numberSize"></label>
+            <input id="fourth" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="dm" placeholder="Yes = 1, No=0" required="required">            
             <br>
             <h3>Coronary Artery Disease</h3>
-            <input id="eight" name="cad" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="cad" placeholder="Yes = 1, No=0" required="required">
             <br>
             <h3>Appetite</h3>
-            <input id="sixth" name="appet" placeholder="Good = 1, Poor = 0" required="required">
+            <label for="numberSize"></label>
+            <input id="sixth" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="appet" placeholder="Good = 1, Poor = 0" required="required">
             <br>
             <h3>Pedal Edema</h3>
-            <input id="eight" name="pe" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="pe" placeholder="Yes = 1, No=0" required="required">
             <br>
             <h3>Anemia</h3>
-            <input id="eight" name="ane" placeholder="Yes = 1, No=0" required="required">
+            <label for="numberSize"></label>
+            <input id="eight" type="number" min="0" max="1" oninput="(!validity.rangeOverflow||(value=1)) && (!validity.rangeUnderflow||(value=1)) &&
+            (!validity.stepMismatch||(value=parseInt(this.value)));" name="ane" placeholder="Yes = 1, No=0" required="required">
             
             <br>
             <br>
@@ -133,6 +160,12 @@ body{
 /* Heading Font */
 .container-heading{
     margin: 0;
+}
+
+#error {
+  display: block;
+  color: red;
+  margin: 5px 0 0 0;
 }
 
 .heading_font{
